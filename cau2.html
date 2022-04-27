@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [1, 6, 8, 2, 87, 8, 33, 5, 0, -1, 87];
+
+    function tryRemoveFromArray(arr, index) {
+        let arr2 = new Array(arr.length - 1)
+        if (index < arr.length) {
+            for (let i = 0; i < arr.length - 1; i++) {
+                if (i < index) {
+                    arr2[i] = arr[i]
+                } else {
+                    arr2[i] = arr[i + 1]
+                }
+            }
+            return arr2
+        } else {
+            return arr
+        }
+    }
+
+    arr=tryRemoveFromArray(arr,2)
+    console.log(arr)
+</script>
+</body>
+</html>

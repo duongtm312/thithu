@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr=[1,2,3,6,8,2,87,8,33,5,0,-1,87,33];
+    //Sap xep lai mang
+    function xapxep(arr){
+        let min=0;
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = i+1; j < arr.length; j++) {
+                if (arr[i]>arr[j]){
+                    min=arr[i];
+                    arr[i]=arr[j];
+                    arr[j]=min;
+                }
+            }
+        }
+
+    }
+    xapxep(arr);
+    console.log(arr)
+    //tim so thu 3
+    function check3(arr){
+        let max1=arr[arr.length-1]
+        let max2
+        let max3
+        let i= arr.length-2
+        for (; i >=0; i--) {
+            if (max1!=arr[i]){
+                max2=arr[i]
+                break
+            }
+        }
+        console.log(max2)
+        for (; i >=0; i--) {
+            if (max2!=arr[i-1]){
+                max3=arr[i-1]
+                break
+            }
+        }
+        return max3
+    }
+
+    console.log( check3(arr))
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let str1 = "fdsafs"
+    let str2 = 'fdsfasfdsafsaeveryhellobody'
+
+    function checkStr(str1, str2) {
+        let count = 0;
+        for (let i = 0; i < str2.length; i++) {
+            count = 0
+            for (let j = 0; j < str1.length; j++) {
+                if (str1[j] == str2[i + j]) {
+                    count++
+                    if (count == str1.length) {
+                        return true
+                    }
+                }
+            }
+
+        }
+return false
+    }
+
+    console.log(checkStr(str1, str2))
+</script>
+</body>
+</html>
